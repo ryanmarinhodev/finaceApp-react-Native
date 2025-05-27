@@ -8,7 +8,7 @@ const transactions = [
 ];
 
 export default function Index() {
-  const name = "ryan";
+  const name = "Ryan";
 
   // Calculo saldo total
   const totalAmount = transactions.reduce((sum, t) => sum + t.amount, 0);
@@ -16,7 +16,7 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("@/assets/images/logo-finance.png")}
+        source={require("@/assets/images/logo-financas.png")}
         style={styles.logo}
       />
       <Text style={styles.greeting}>Olá, {name}!</Text>
@@ -55,12 +55,12 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#545454",
+    backgroundColor: "#000",
     padding: 20,
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
     marginBottom: 10,
     marginHorizontal: "auto",
   },
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "500",
     marginBottom: 20,
-    color: "#fff",
+    color: "#FFAA00",
   },
   buttonsContainer: {
     flexDirection: "row",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: "#2c5f30",
+    backgroundColor: "#89ff00",
     borderRadius: 10,
     elevation: 2,
     padding: 10,
