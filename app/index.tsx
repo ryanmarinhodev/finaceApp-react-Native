@@ -38,7 +38,12 @@ export default function Index() {
       {transactions.map((transaction) => (
         <View key={transaction.id} style={styles.transactionItem}>
           <Text style={styles.transactionText}>{transaction.description}</Text>
-          <Text style={styles.transactionAmount}>
+          <Text
+            style={[
+              styles.transactionAmount,
+              transaction.amount < 0 ? styles.expense : styles.income,
+            ]}
+          >
             {transaction.amount.toFixed(2)}
           </Text>
         </View>
