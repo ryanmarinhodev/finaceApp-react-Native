@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const transactions = [
   { id: "1", description: "Supermercado", amount: -50.75 },
@@ -48,6 +55,25 @@ export default function Index() {
           </Text>
         </View>
       ))}
+
+      {/* <Button title="botão ryan" onPress={() => alert("Você clicou")} /> */}
+
+      <TouchableOpacity
+        style={styles.buttonTouchableOpacity}
+        onPress={() => alert("Você tocou!")}
+      >
+        <Text>Toque TouchableOpacity</Text>
+      </TouchableOpacity>
+
+      <Pressable
+        style={({ pressed }) => [
+          styles.button,
+          { backgroundColor: pressed ? "#133d13" : "#89ff00" },
+        ]}
+        onPress={() => alert("pressionado")}
+      >
+        <Text>Pressable</Text>
+      </Pressable>
     </View>
   );
 }
@@ -116,5 +142,10 @@ const styles = StyleSheet.create({
   },
   expense: {
     color: "red",
+  },
+  buttonTouchableOpacity: {
+    backgroundColor: "blue",
+    borderRadius: 30,
+    padding: 10,
   },
 });
