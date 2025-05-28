@@ -1,13 +1,13 @@
-import {
-  Image,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import CusttonButton from "@/src/components/CusttonButton";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-const transactions = [
+interface TransactionTypes {
+  id: string;
+  description: string;
+  amount: number;
+}
+
+const transactions: TransactionTypes[] = [
   { id: "1", description: "Supermercado", amount: -50.75 },
   { id: "2", description: "Salário", amount: 2500.0 },
   { id: "3", description: "Restaurante", amount: -120.4 },
@@ -58,12 +58,10 @@ export default function Index() {
 
       {/* <Button title="botão ryan" onPress={() => alert("Você clicou")} /> */}
 
-      <TouchableOpacity
-        style={styles.buttonTouchableOpacity}
-        onPress={() => alert("Você tocou!")}
-      >
-        <Text>Toque TouchableOpacity</Text>
-      </TouchableOpacity>
+      <CusttonButton
+        title="Toque CustomButton"
+        onPress={() => alert("voce pressionou")}
+      />
 
       <Pressable
         style={({ pressed }) => [
