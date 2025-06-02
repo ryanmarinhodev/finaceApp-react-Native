@@ -1,17 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-interface CustumButtonProps {
+interface CustomButtonProps {
   title: string;
   onPress: () => void;
 }
 
-const CusttonButton: React.FC<CustumButtonProps> = ({ title, onPress }) => {
+const CusttonButton: React.FC<CustomButtonProps> = ({ title, onPress }) => {
   return (
-    <TouchableOpacity style={styles.buttonTouchableOpacity}>
-      <Text style={[styles.buttonText]} onPress={onPress}>
-        {title}
-      </Text>
+    <TouchableOpacity style={styles.buttonTouchableOpacity} onPress={onPress}>
+      <Text style={[styles.buttonText]}>{title}</Text>
     </TouchableOpacity>
   );
 };
