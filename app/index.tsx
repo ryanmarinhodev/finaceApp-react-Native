@@ -1,5 +1,5 @@
 import CusttonButton from "@/src/components/CusttonButton";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
 
 interface TransactionTypes {
   id: string;
@@ -40,6 +40,12 @@ export default function Index() {
         <Text style={styles.button}>Adicionar receita</Text>
         <Text style={styles.button}>Adicionar despesas</Text>
       </View>
+
+      <Modal visible={false}>
+        <View>
+          <Text>Olá Modal</Text>
+        </View>
+      </Modal>
 
       <Text style={styles.sectionTitle}>Transações Recentes</Text>
       {transactions.map((transaction) => (
