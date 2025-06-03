@@ -1,6 +1,14 @@
 import CusttonButton from "@/src/components/CusttonButton";
 import { useState } from "react";
-import { Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Modal,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 interface TransactionTypes {
   id: string;
@@ -53,9 +61,14 @@ export default function Index() {
         </Pressable>
       </View>
 
-      <Modal visible={openModal}>
+      <Modal visible={openModal} onRequestClose={() => setOpenModal(false)}>
         <View>
-          <Text>Olá Modal</Text>
+          <TouchableOpacity
+            style={styles.closeModalButton}
+            onPress={() => setOpenModal(false)}
+          >
+            <Text>Fechar Modal</Text>
+          </TouchableOpacity>
         </View>
       </Modal>
 
@@ -163,5 +176,11 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
     borderRadius: 30,
     padding: 10,
+  },
+  closeModalButton: {
+    padding: 20,
+    marginTop: 20,
+    color: "#000",
+    backgroundColor: "#35cbd6",
   },
 });
