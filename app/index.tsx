@@ -24,7 +24,7 @@ export default function Index() {
   //Estado Modal:
   const [openModal, setOpenModal] = useState(false);
 
-  const functionModal = () => {
+  const functionModalOpen = () => {
     setOpenModal(true);
   };
 
@@ -45,8 +45,12 @@ export default function Index() {
       </Text>
 
       <View style={styles.buttonsContainer}>
-        <Text style={styles.button}>Adicionar receita</Text>
-        <Text style={styles.button}>Adicionar despesas</Text>
+        <Pressable style={styles.button} onPress={functionModalOpen}>
+          <Text style={styles.buttonText}>Adicionar receita</Text>
+        </Pressable>
+        <Pressable style={styles.button} onPress={functionModalOpen}>
+          <Text style={styles.buttonText}>Adicionar despesas</Text>
+        </Pressable>
       </View>
 
       <Modal visible={openModal}>
