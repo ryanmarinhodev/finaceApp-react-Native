@@ -1,4 +1,5 @@
 import CusttonButton from "@/src/components/CusttonButton";
+import { useState } from "react";
 import { Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
 
 interface TransactionTypes {
@@ -19,6 +20,13 @@ export default function Index() {
 
   // Calculo saldo total
   const totalAmount = transactions.reduce((sum, t) => sum + t.amount, 0);
+
+  //Estado Modal:
+  const [openModal, setOpenModal] = useState(false);
+
+  const functionModal = () => {
+    setOpenModal(true);
+  };
 
   return (
     <View style={styles.container}>
@@ -41,7 +49,7 @@ export default function Index() {
         <Text style={styles.button}>Adicionar despesas</Text>
       </View>
 
-      <Modal visible={false}>
+      <Modal visible={openModal}>
         <View>
           <Text>Olá Modal</Text>
         </View>
