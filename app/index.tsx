@@ -61,14 +61,22 @@ export default function Index() {
         </Pressable>
       </View>
 
-      <Modal visible={openModal} onRequestClose={() => setOpenModal(false)}>
-        <View>
-          <TouchableOpacity
-            style={styles.closeModalButton}
-            onPress={() => setOpenModal(false)}
-          >
-            <Text>Fechar Modal</Text>
-          </TouchableOpacity>
+      <Modal
+        visible={openModal}
+        onRequestClose={() => setOpenModal(false)}
+        transparent={true}
+      >
+        <View style={styles.viewModal}>
+          <View style={styles.modalStyleBox}>
+            <Text style={styles.modalText}>Modal Aberto</Text>
+            <Text style={styles.modalParagraph}>Parágrafo do modal</Text>
+            <TouchableOpacity
+              style={styles.closeModalButton}
+              onPress={() => setOpenModal(false)}
+            >
+              <Text style={styles.buttonText}>Fechar Modal</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </Modal>
 
@@ -176,6 +184,29 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
     borderRadius: 30,
     padding: 10,
+  },
+  viewModal: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  modalStyleBox: {
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 30,
+  },
+  modalText: {
+    fontSize: 25,
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  modalParagraph: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#808080",
   },
   closeModalButton: {
     padding: 20,
