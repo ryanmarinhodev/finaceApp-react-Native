@@ -215,3 +215,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#35cbd6",
   },
 });
+
+// Tarefas a serem cumpridas:
+
+// 1. Separar o componente do modal
+// 2. Criar o botão de salvar
+// 3. O botão de salvar deve fechar o modal
