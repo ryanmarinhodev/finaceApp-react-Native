@@ -218,6 +218,6 @@ const styles = StyleSheet.create({
 
 // Tarefas a serem cumpridas:
 
-// 1. Separar o componente do modal
+// 1. Separar o componente e estilos do modal
 // 2. Criar o botão de salvar
 // 3. O botão de salvar deve fechar o modal
