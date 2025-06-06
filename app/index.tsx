@@ -1,14 +1,7 @@
 import CusttonButton from "@/src/components/CusttonButton";
+import ModalComponent from "@/src/components/modalComponent/modal";
 import { useState } from "react";
-import {
-  Image,
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 interface TransactionTypes {
   id: string;
@@ -36,6 +29,10 @@ export default function Index() {
     setOpenModal(true);
   };
 
+  const functionModalClose = () => {
+    setOpenModal(false);
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -61,24 +58,7 @@ export default function Index() {
         </Pressable>
       </View>
 
-      <Modal
-        visible={openModal}
-        onRequestClose={() => setOpenModal(false)}
-        transparent={true}
-      >
-        <View style={styles.viewModal}>
-          <View style={styles.modalStyleBox}>
-            <Text style={styles.modalText}>Modal Aberto</Text>
-            <Text style={styles.modalParagraph}>Parágrafo do modal</Text>
-            <TouchableOpacity
-              style={styles.closeModalButton}
-              onPress={() => setOpenModal(false)}
-            >
-              <Text style={styles.buttonText}>Fechar Modal</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+      <ModalComponent visible={openModal} onClose={functionModalClose} />
 
       <Text style={styles.sectionTitle}>Transações Recentes</Text>
       {transactions.map((transaction) => (
