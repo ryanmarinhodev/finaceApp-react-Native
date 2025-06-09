@@ -24,6 +24,10 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     color: "#808080",
   },
+  modalButtonsPai: {
+    flexDirection: "row",
+    gap: 13,
+  },
   closeModalButton: {
     padding: 10,
     marginTop: 20,
