@@ -1,7 +1,14 @@
 import CusttonButton from "@/src/components/CusttonButton";
 import ModalComponent from "@/src/components/modalComponent/modal";
 import { useState } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 interface TransactionTypes {
   id: string;
@@ -34,7 +41,7 @@ export default function Index() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image
         source={require("@/assets/images/logo-financas.png")}
         style={styles.logo}
@@ -91,7 +98,7 @@ export default function Index() {
       >
         <Text>Pressable</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
