@@ -18,7 +18,7 @@ function ModalComponent({ visible, onClose }: ModalProps) {
       <View style={styles.viewModal}>
         <View style={styles.modalStyleBox}>
           <Text style={styles.modalText}>Modal Aberto</Text>
-          <Text style={styles.modalParagraph}>Parágrafo do modal</Text>
+          <Text style={styles.modalParagraph}>Parágrafo</Text>
           <View style={styles.modalButtonsPai}>
             <TouchableOpacity style={styles.closeModalButton} onPress={onClose}>
               <Text style={styles.modalButtonText} onPress={handleSave}>
