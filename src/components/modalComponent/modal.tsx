@@ -5,11 +5,12 @@ import { styles } from "./styles";
 interface ModalProps {
   visible: boolean;
   onClose: () => void;
+  onSave: (data: { description: string; amount: number }) => void;
 }
 
-function ModalComponent({ visible, onClose }: ModalProps) {
+function ModalComponent({ visible, onClose, onSave }: ModalProps) {
   const handleSave = () => {
-    alert("Salvo com sucesso!");
+    onSave({ description: "", amount: 0 });
     onClose();
   };
 
