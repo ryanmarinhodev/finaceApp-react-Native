@@ -40,6 +40,10 @@ export default function Index() {
     setOpenModal(false);
   };
 
+  const handleSaveItem = () => {
+    alert("Dados salvos com sucesso!");
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Image
@@ -65,7 +69,11 @@ export default function Index() {
         </Pressable>
       </View>
 
-      <ModalComponent visible={openModal} onClose={functionModalClose} />
+      <ModalComponent
+        visible={openModal}
+        onClose={functionModalClose}
+        onSave={handleSaveItem}
+      />
 
       <Text style={styles.sectionTitle}>Transações Recentes</Text>
       {transactions.map((transaction) => (
