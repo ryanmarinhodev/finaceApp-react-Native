@@ -13,6 +13,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 30,
+    // width: "100%",
+    // height: "80%",
   },
   modalText: {
     fontSize: 25,
