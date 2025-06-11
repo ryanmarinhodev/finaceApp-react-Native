@@ -15,16 +15,22 @@ function ModalComponent({ visible, onClose, onSave }: ModalProps) {
   };
 
   return (
-    <Modal visible={visible} onRequestClose={() => onClose} transparent={true}>
+    <Modal
+      visible={visible}
+      onRequestClose={() => onClose}
+      transparent={false}
+      animationType="slide"
+    >
       <View style={styles.viewModal}>
         <View style={styles.modalStyleBox}>
           <Text style={styles.modalText}>Modal Aberto</Text>
           <Text style={styles.modalParagraph}>Parágrafo</Text>
           <View style={styles.modalButtonsPai}>
-            <TouchableOpacity style={styles.closeModalButton}>
-              <Text style={styles.modalButtonText} onPress={handleSave}>
-                Salvar
-              </Text>
+            <TouchableOpacity
+              style={styles.closeModalButton}
+              onPress={handleSave}
+            >
+              <Text style={styles.modalButtonText}>Salvar</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.closeModalButton} onPress={onClose}>
               <Text style={styles.modalButtonText}>Fechar</Text>
