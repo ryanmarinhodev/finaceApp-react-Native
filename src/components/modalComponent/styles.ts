@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   viewModal: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.5)",
+    padding: 20,
   },
   modalStyleBox: {
     backgroundColor: "#fff",
@@ -13,8 +11,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 30,
-    // width: "100%",
-    // height: "80%",
+    width: "100%",
+    maxHeight: "100%",
   },
   modalText: {
     fontSize: 25,
