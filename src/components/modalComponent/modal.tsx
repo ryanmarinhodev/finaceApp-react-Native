@@ -23,16 +23,18 @@ function ModalComponent({ visible, onClose, onSave }: ModalProps) {
     >
       <View style={styles.viewModal}>
         <View style={styles.modalStyleBox}>
-          <Text style={styles.modalText}>Modal Aberto</Text>
-          <Text style={styles.modalParagraph}>Parágrafo</Text>
+          <Text style={styles.modalText}>Adicionar Transação</Text>
           <View style={styles.modalButtonsPai}>
             <TouchableOpacity
-              style={styles.closeModalButton}
+              style={styles.closeModalButtonSave}
               onPress={handleSave}
             >
-              <Text style={styles.modalButtonText}>Salvar</Text>
+              <Text style={styles.buttonTextSave}>Salvar transação</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.closeModalButton} onPress={onClose}>
+            <TouchableOpacity
+              style={styles.closeModalButtonClose}
+              onPress={onClose}
+            >
               <Text style={styles.modalButtonText}>Fechar</Text>
             </TouchableOpacity>
           </View>
