@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   viewModal: {
     flex: 1,
-    padding: 20,
+    padding: 30,
+    backgroundColor: "#000",
   },
   modalStyleBox: {
     backgroundColor: "#fff",
@@ -19,16 +20,21 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
   },
-  modalParagraph: {
-    fontSize: 16,
-    textAlign: "center",
-    color: "#808080",
-  },
   modalButtonsPai: {
     flexDirection: "row",
     gap: 13,
   },
-  closeModalButton: {
+  buttonTextSave: {
+    fontSize: 16,
+    color: "#fff",
+  },
+  closeModalButtonSave: {
+    padding: 10,
+    marginTop: 20,
+    color: "#000",
+    backgroundColor: "#FFAA00",
+  },
+  closeModalButtonClose: {
     padding: 10,
     marginTop: 20,
     color: "#000",
